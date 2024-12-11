@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="255dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="152dp"
+        android:text="Salvar Informações"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/idsenha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idsenha"
+        app:layout_constraintTop_toBottomOf="@+id/idsenha" />
+
+    <EditText
+        android:id="@+id/idlogin"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="318dp"
+        android:layout_height="58dp"
+        android:text="Digite suas credencias para continuar"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <EditText
+        android:id="@+id/idsenha"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="@+id/idlogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idlogin"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="128dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="56dp"
+        android:onClick="entrarClicado"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="94dp"
+        android:background="#3b8eed"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="148dp"
+            android:layout_height="69dp"
+            android:layout_marginEnd="48dp"
+            android:text="Active Manager"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.501" />
+
+        <ImageView
+            android:id="@+id/activypng"
+            android:layout_width="161dp"
+            android:layout_height="143dp"
+            android:src="@drawable/activymaneger_removebg_preview__1_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="78dp"
+        android:text="Login:"
+        app:layout_constraintBottom_toTopOf="@+id/idsenha"
+        app:layout_constraintEnd_toStartOf="@+id/idlogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Senha:"
+        app:layout_constraintEnd_toStartOf="@+id/idsenha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
