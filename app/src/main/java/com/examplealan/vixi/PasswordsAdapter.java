@@ -1,6 +1,7 @@
 package com.examplealan.vixi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -18,6 +19,16 @@ class PasswordsAdapter extends RecyclerView.Adapter<PasswordsViewHolder> {
         passwordDAO = new PasswordDAO(context);
         update();
     }
+    public interface OnCategoryChangeListener {
+        void onCategoryChange(int food, int transport, int leisure, int health);
+    }
+
+    private OnCategoryChangeListener listener;
+
+    public void setOnCategoryChangeListener(OnCategoryChangeListener listener) {
+        this.listener = listener;
+    }
+
     public void update() { passwords = passwordDAO.getList(); }
     public PasswordsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ConstraintLayout v = (ConstraintLayout) LayoutInflater
@@ -30,7 +41,9 @@ class PasswordsAdapter extends RecyclerView.Adapter<PasswordsViewHolder> {
         holder.name.setText(passwords.get(position).getName());
         holder.login.setText(passwords.get(position).getLogin());
         holder.id = passwords.get(position).getId();
+
     }
     public int getItemCount() { return passwords.size(); }
 }
+
 
